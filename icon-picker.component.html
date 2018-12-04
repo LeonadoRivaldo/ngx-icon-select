@@ -1,0 +1,14 @@
+<div id="select-icon">
+  <label *ngIf="label" for="icone-select" class="label-open">
+    {{label}}
+  </label>
+  <div class="select-icon-container align-items-center d-flex justify-content-between" (click)="toogle()" [class.open]="showList">
+    <i class="{{model}} icon"></i>
+    <i class="setinha fa fa-caret-{{ !showList? 'right' : 'down' }}"></i>
+  </div>
+  <ul class="select-icon-list align-items-center d-flex" *ngIf="showList">
+    <li class="icon-list-item" *ngFor="let icone of iconList">
+      <i [class]="icone" [class.cor-padrao]="selected(icone)" [class.selected]="selected(icone)" (click)="select(icone)"></i>
+    </li>
+  </ul>
+</div>

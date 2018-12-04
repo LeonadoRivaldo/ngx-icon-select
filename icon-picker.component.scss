@@ -1,0 +1,45 @@
+@import "../../assets/scss/_imports";
+#select-icon{
+  position: relative;
+  max-width: 300px;
+}
+#select-icon .select-icon-list{
+  list-style: none;
+  border: 1px solid $cinza-bordas;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 260px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  top: calc( 100% + 5px );
+  box-shadow: 1px 8px 13px 0 rgba(51,51,51,.2);
+}
+#select-icon .select-icon-list .icon-list-item{
+  text-align: center;
+  font-size:28px;
+  line-height: 1;
+  padding: 7px 5px;
+  min-width: 35px;
+}
+#select-icon .select-icon-list .icon-list-item i{ cursor:pointer; display:initial; @include transicao; }
+#select-icon .select-icon-list .icon-list-item i:hover{ color:$verde }
+#select-icon .select-icon-list .icon-list-item i.selected{ pointer-events:none; }
+#select-icon .select-icon-container{
+  padding: 0 15px;
+  border: 1px solid $cinza-bordas;
+  height:42px;
+  width: 90px;
+  border-radius: 5px;
+  background: #fff;
+  cursor:pointer;
+}
+
+#select-icon .select-icon-container.open{
+  background:$bgMaisEscuro;
+}
+
+#select-icon .select-icon-container i{ display:initial; }
+#select-icon .select-icon-container i.icon{ font-size:28px; color:#666 }
